@@ -10,7 +10,7 @@ SQLib is a python library to use SQL Databases without having to write SQL, base
 ![GitHub License](https://img.shields.io/github/license/TRC-Loop/SQLib?style=flat)
 
 ## Installation
-![Install using pip:](https://pypi.org/project/SQLibEngine/)
+[Install using pip:](https://pypi.org/project/SQLibEngine/)
 
 ```bash
 pip3 install SQLibEngine
