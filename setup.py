@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="SQLib",
+    name="SQLibEngine",
     version="0.1.0",
     author="AK",
     author_email="ak@stellar-code.com",
