@@ -1,5 +1,3 @@
-import sqlite3 as _sqlite3
-
 TYPES = {
     int: "INTEGER",
     str: "TEXT",
