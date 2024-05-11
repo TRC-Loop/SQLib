@@ -8,7 +8,7 @@ with open(os.path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="SQLibEngine",
-    version="0.1.1",
+    version="0.1.2",
     author="AK",
     author_email="ak@stellar-code.com",
     url="https://github.com/TRC-Loop/SQLib",
