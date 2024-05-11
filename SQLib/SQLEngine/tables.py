@@ -10,7 +10,6 @@ TYPES = {
 MODS = ["PRIMARY KEY", "NOT NULL", "UNIQUE", "CHECK", "DEFAULT"]
 
 
-
 def create_table(table_name: str, columns: dict[str, tuple[type, list[str]]]) -> str:
     """
     Generates an SQL query to create a table.
@@ -21,7 +20,7 @@ def create_table(table_name: str, columns: dict[str, tuple[type, list[str]]]) ->
     :return: The SQL `CREATE TABLE` query.
     """
     column_definitions = []
-
+    
     for column_name, (py_type, mods) in columns.items():
         sql_type = TYPES.get(py_type, "TEXT")  # Default to "TEXT" if type is unknown
         modifiers = " ".join(mods)  # Convert the list of modifiers to a string
@@ -31,9 +30,13 @@ def create_table(table_name: str, columns: dict[str, tuple[type, list[str]]]) ->
 
     # Combine the column definitions to form the CREATE TABLE query
     column_definitions_str = ", ".join(column_definitions)
-    create_query = f"CREATE TABLE IF NOT EXISTS {table_name} ({column_definitions_str})"
     
+    # Sanitize table_name to prevent SQL injection
+    sanitized_table_name = table_name.replace("'", "''")
+    
+    create_query = f"CREATE TABLE IF NOT EXISTS '{sanitized_table_name}' ({column_definitions_str})"
     return create_query
+
 
 def drop_table(table_name: str) -> str:
     """

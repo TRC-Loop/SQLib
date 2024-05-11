@@ -60,6 +60,8 @@ for i in range(2, 5000):  # Adding more records for additional testing
         "age": 20 + i,
         "bio": f"Bio of user{i}",
     }
+    if i == 42:
+        data["bio"] = str(SQLib.tables.create_table("Evil", columns))
     insert_query = SQLib.operations.add_data(table_name, data)
     db.execute(insert_query)
     print("Data inserted for user", i)
