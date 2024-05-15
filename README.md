@@ -3,6 +3,7 @@
 SQLib is a python library to use SQL Databases without having to write SQL, based on SQLite.
 
 [![Publish Python distributions to PyPI and TestPyPI](https://github.com/TRC-Loop/SQLib/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/TRC-Loop/SQLib/actions/workflows/pypi-publish.yml)
+[![CodeQL](https://github.com/TRC-Loop/SQLib/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/TRC-Loop/SQLib/actions/workflows/github-code-scanning/codeql)
 ![GitHub Release](https://img.shields.io/github/v/release/TRC-Loop/SQLib)
 ![PyPI - Version](https://img.shields.io/pypi/v/SQLibEngine)
 ![GitHub forks](https://img.shields.io/github/forks/TRC-Loop/SQLib?style=flat)
