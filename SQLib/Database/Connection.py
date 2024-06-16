@@ -3,11 +3,11 @@ from .Exceptions import FetchError, QueryError
 import os
 
 class SQLite3:
-    def __init__(self, db_name):
+    def __init__(self, db_name, check_same_thread: bool = False):
         if db_name == "--UwU--":
             raise Exception("UwU is not a valid database name. (; hehe <3")
         try:
-            self.connection = _sqlite3.connect(db_name)  # Initialize connection
+            self.connection = _sqlite3.connect(db_name, check_same_thread=check_same_thread)  # Initialize connection
             self.cursor = self.connection.cursor()  # Initialize cursor
         except _sqlite3.Error as e:
             print(f"Error initializing database connection: {e}")
